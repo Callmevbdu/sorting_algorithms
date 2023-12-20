@@ -56,3 +56,4 @@ void quick_sort_hoare(int *array, size_t size);
 /* My functions */
 void intSwap(int *x, int *y);
 #endif /* SORT_H */
+
