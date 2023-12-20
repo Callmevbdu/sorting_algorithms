@@ -1,6 +1,21 @@
 #include "sort.h"
 
 /**
+ * intSwap - Function that swaps two integers in an array.
+ * @x: first integer.
+ * @y: second integer.
+ */
+
+ void intSwap(int *x, int *y)
+{
+	int z;
+
+	z = *x;
+	*x = *y;
+	*y = z;
+}
+
+/**
  * selection_sort - function that sorts an array (ascending order).
  * @array: array.
  * @size: size of array.
