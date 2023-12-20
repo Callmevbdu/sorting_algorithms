@@ -2,9 +2,9 @@
 
 /**
  * nodesSwap - function that swaps two nodes.
- * @h: pointer to the head of list.
- * @n1: pointer to the first node.
- * @n2: second node.
+ * @head: pointer to the head of list.
+ * @a: pointer to the first node.
+ * @b: second node.
  */
 void nodesSwap(listint_t **head, listint_t **a, listint_t *b)
 {
@@ -23,25 +23,25 @@ void nodesSwap(listint_t **head, listint_t **a, listint_t *b)
 
 /**
  * insertion_sort_list - function that sorts a list
- * 					(the insertion sort algorithm).
+ * (the insertion sort algorithm).
  * @list: pointer to the head of a list.
  * Description: prints the list after each swap.
  */
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *iter, *insert, *tmp;
+	listint_t *itr, *ins, *old;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	for (iter = (*list)->next; iter != NULL; iter = tmp)
+	for (itr = (*list)->next; itr != NULL; itr = old)
 	{
-		tmp = iter->next;
-		insert = iter->prev;
-		while (insert != NULL && iter->n < insert->n)
+		old = itr->next;
+		ins = itr->prev;
+		while (ins != NULL && itr->n < ins->n)
 		{
-			nodesSwap(list, &insert, iter);
+			nodesSwap(list, &ins, itr);
 			print_list((const listint_t *)*list);
 		}
 	}
