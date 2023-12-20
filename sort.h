@@ -10,8 +10,13 @@
 #define UP 0
 #define DOWN 1
 
-/* Boolean type definition for C89 */
-typedef enum {
+/**
+ * enum bool - boolean type definition for C89
+ * @false: 0
+ * @true: 1
+ */
+typedef enum bool
+{
 	false = 0,
 	true
 } boolean;
