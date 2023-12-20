@@ -53,7 +53,5 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-/* My functions */
-void intSwap(int *x, int *y);
 #endif /* SORT_H */
 
