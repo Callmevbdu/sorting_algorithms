@@ -1,46 +1,47 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * intSwap - Function that swaps two integers in an array.
+ * @x: first integer.
+ * @y: second integer.
  */
-void swap_ints(int *a, int *b)
-{
-	int tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+void intSwap(int *x, int *y)
+{
+	int z;
+
+	z = *x;
+	*x = *y;
+	*y = z;
 }
 
 /**
- * bubble_sort - Sort an array of integers in ascending order.
- * @array: An array of integers to sort.
- * @size: The size of the array.
- *
- * Description: Prints the array after each swap.
+ * bubble_sort - function that sorts an array (ascending order).
+ * @array: array to sort.
+ * @size: size of array.
+ * Description: sorts an array.
  */
+
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	bool bubbly = false;
+	size_t itr, length = size;
+	boolean bub = false;
 
 	if (array == NULL || size < 2)
 		return;
 
-	while (bubbly == false)
+	while (bub == false)
 	{
-		bubbly = true;
-		for (i = 0; i < len - 1; i++)
+		bub = true;
+		for (itr = 0; itr < length - 1; itr++)
 		{
-			if (array[i] > array[i + 1])
+			if (array[itr] > array[itr + 1])
 			{
-				swap_ints(array + i, array + i + 1);
+				intSwap(array + itr, array + itr + 1);
 				print_array(array, size);
-				bubbly = false;
+				bub = false;
 			}
 		}
-		len--;
+		length--;
 	}
 }
