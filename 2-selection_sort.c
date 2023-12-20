@@ -6,7 +6,7 @@
  * @y: second integer.
  */
 
- void intSwap(int *x, int *y)
+void intSwap(int *x, int *y)
 {
 	int z;
 
